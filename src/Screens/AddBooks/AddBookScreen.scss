@@ -1,0 +1,59 @@
+@import "../../Colors.scss";
+.adduserdiv {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	.adduserform {
+		width: 95%;
+		max-width: 500px;
+		height: 80%;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-direction: column;
+		.formHeading {
+			color: $primary_color;
+			@include fontSizeP(4vw);
+			text-align: center;
+		}
+		input {
+			width: 90%;
+			@include heightP(4vh);
+			outline-width: 0;
+			border: 0;
+			border-radius: 1vh;
+			background-color: $primary_color;
+			padding-left: 1vh;
+			padding-right: 1vh;
+			@include fontSizeP(0.2vw);
+			color: $secondry_color;
+		}
+		#file {
+			padding-top: 2vh;
+		}
+		textarea {
+			width: 90%;
+			@include heightP(10vh);
+			outline-width: 0;
+			border: 0;
+			border-radius: 1vh;
+			background-color: $primary_color;
+			padding-left: 1vh;
+			padding-right: 1vh;
+			@include fontSizeP(0.2vw);
+			color: $secondry_color;
+		}
+		button {
+			width: 90%;
+			max-width: 350px;
+			@include heightP(4vh);
+			background-color: $secondry_color;
+			border-radius: 1vh;
+			@include fontSizeP(0.2vw);
+			color: $primary_color;
+			font-weight: bold;
+			cursor: pointer;
+		}
+	}
+}

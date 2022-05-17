@@ -1,0 +1,56 @@
+$primary_color: #022c43;
+$secondry_color: #fff61b;
+$text_color: #ffffff;
+$disab_color: #dadada;
+$input_color: #f8f8f8;
+$serch_color: #c4c4c4;
+@mixin justifyStart() {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+@mixin alignStart() {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+@mixin justifyEnd() {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@mixin allCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin justifyBtwn() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin justifyArnd() {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+@mixin justifyEvn() {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@mixin gridSystem($grid) {
+  display: grid;
+  grid-template-columns: repeat($grid, 1fr);
+  gap: 15px;
+  width: 100%;
+}
+@mixin fontSizeP($num) {
+  font-size: calc(20px + $num);
+}
+@mixin widthP($num) {
+  width: calc(20px + $num);
+}
+@mixin heightP($num) {
+  height: calc(20px + $num);
+}

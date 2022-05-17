@@ -1,0 +1,67 @@
+@import "../../Colors.scss";
+.chatContainer {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	.maindiv {
+		width: 98%;
+		height: 100%;
+		align-self: center;
+		.chatheader {
+			width: 100%;
+			height: 8vh;
+			font-size: 3vh;
+			font-weight: bold;
+			color: $secondry_color;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: $primary_color;
+		}
+		.msgcontainer {
+			height: calc(100% - 18vh);
+			width: 100%;
+			overflow-y: auto;
+			overflow-x: hidden;
+			padding: 1vh 0;
+		}
+		.msgsender {
+			width: 100%;
+			height: 8vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			background-color: $primary_color;
+			input {
+				height: 100%;
+				width: 90vw;
+				border: 0;
+				outline: 0;
+				font-size: 4vh;
+				color: $secondry_color;
+				padding-left: 10px;
+				background-color: transparent;
+				&::placeholder {
+					color: lightgrey;
+				}
+			}
+			button {
+				width: 10vw;
+				height: 98%;
+				background-color: transparent;
+				border: 1px solid $secondry_color;
+				#FORWARD {
+					font-size: 6vh;
+					color: $secondry_color;
+				}
+				&:hover {
+					background-color: $secondry_color;
+					#FORWARD {
+						color: $primary_color;
+					}
+				}
+			}
+		}
+	}
+}
