@@ -36,6 +36,22 @@
 		align-items: flex-start;
 		justify-content: center;
 		flex-direction: column;
+		.rowdiv {
+			width: 100%;
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			flex-direction: row;
+			margin-bottom: 10px;
+			.bookimg {
+				width: 45px;
+				height: 45px;
+				border-radius: 45px;
+				margin-right: 10px;
+				border: 1px solid lightgrey;
+				overflow: hidden;
+			}
+		}
 		h1 {
 			color: $secondry_color;
 			margin-bottom: 10px;

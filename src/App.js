@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import Navigation from "./Navigation/Navigation";
 import { setAuth } from "./store/authSlice";
-import { setBooks, setChat } from "./store/projectSlice";
+import { setBooks, setChat, setOrders } from "./store/projectSlice";
 import { db } from "./Database/firebaseConfig";
 function App() {
 	const dispatch = useDispatch();
@@ -37,6 +37,21 @@ function App() {
 				})
 			);
 		});
+
+		db.collection("confirmOrder")
+			.orderBy("createdAt", "desc")
+			.onSnapshot((snapshot) => {
+				dispatch(
+					setOrders({
+						orders: snapshot.docs.map((doc) => ({
+							id: doc.id,
+							createdAt: doc.data().createdAt,
+							userinfo: doc.data().userinfo,
+							books: doc.data().books,
+						})),
+					})
+				);
+			});
 	}, []);
 
 	return (

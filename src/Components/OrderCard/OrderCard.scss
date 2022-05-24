@@ -1,0 +1,32 @@
+@import "../../Colors.scss";
+.orderCard {
+	width: 95%;
+	max-width: 250px;
+	height: 350px;
+	border-radius: 15px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	background-color: $primary_color;
+	padding: 0 10px;
+	margin: 0 auto;
+	div {
+		width: 95%;
+		overflow: hidden;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: row;
+		span {
+			font-weight: bold;
+			margin-right: 10px;
+			font-size: 16px;
+			color: $secondry_color;
+		}
+		p {
+			font-size: 14px;
+			color: lightgrey;
+		}
+	}
+}

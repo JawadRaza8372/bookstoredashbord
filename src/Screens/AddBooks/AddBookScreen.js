@@ -93,7 +93,7 @@ function AddBookScreen() {
 					autoCorrect='off'
 					type={"number"}
 					minLength={1}
-					placeholder='Price'
+					placeholder='Price in €'
 					id='price'
 					value={formSubmit.price}
 					onChange={handleChange}

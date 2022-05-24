@@ -1,0 +1,34 @@
+@import "../../Colors.scss";
+.orderscreen {
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 0 30px;
+	.ordercards {
+		@include gridSystem(4);
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.orderscreen {
+		.ordercards {
+			@include gridSystem(3);
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.orderscreen {
+		.ordercards {
+			@include gridSystem(2);
+		}
+	}
+}
+@media only screen and (max-width: 600px) {
+	.orderscreen {
+		.ordercards {
+			@include gridSystem(1);
+		}
+	}
+}

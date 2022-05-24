@@ -7,8 +7,11 @@ function OverViewCard({ name, price, description, imglink, onClickFun }) {
 	return (
 		<div className='overviewcard'>
 			<div className='columndiv'>
-				<h1>{name}</h1>
-				<span>{price}</span>
+				<div className='rowdiv'>
+					<img src={imglink} alt='book' className='bookimg' />
+					<h1>{name}</h1>
+				</div>
+				<span>Price: {price}€</span>
 			</div>
 			<p>
 				{description.length > 250

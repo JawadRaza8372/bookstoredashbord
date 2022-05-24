@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
 	msgs: [],
 	books: [],
-	cart: [],
+	orders: [],
 	mesg: [],
 };
 
@@ -25,11 +25,11 @@ export const projectSlice = createSlice({
 				state.msgs = action.payload.msgs;
 			}
 		},
-		setCart: (state, action) => {
-			if (action.payload.cart === null) {
-				state.cart = [];
+		setOrders: (state, action) => {
+			if (action.payload.orders === null) {
+				state.orders = [];
 			} else {
-				state.cart = action.payload.cart;
+				state.orders = action.payload.orders;
 			}
 		},
 		setChat: (state, action) => {
@@ -42,6 +42,6 @@ export const projectSlice = createSlice({
 	},
 });
 
-export const { setBooks, setMsgs, setCart, setChat } = projectSlice.actions;
+export const { setBooks, setMsgs, setOrders, setChat } = projectSlice.actions;
 
 export default projectSlice.reducer;
