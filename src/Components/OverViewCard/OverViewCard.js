@@ -1,4 +1,3 @@
-import { CircularProgressbar } from "react-circular-progressbar";
 import React from "react";
 import "react-circular-progressbar/dist/styles.css";
 

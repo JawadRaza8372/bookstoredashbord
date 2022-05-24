@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Navigation from "./Navigation/Navigation";
 import { setAuth } from "./store/authSlice";
@@ -52,7 +52,7 @@ function App() {
 					})
 				);
 			});
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<>

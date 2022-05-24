@@ -1,4 +1,3 @@
-import { DeleteForeverRounded } from "@material-ui/icons";
 import React from "react";
 import { useSelector } from "react-redux";
 import OverViewCard from "../../Components/OverViewCard/OverViewCard";

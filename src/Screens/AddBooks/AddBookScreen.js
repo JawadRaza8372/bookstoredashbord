@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./AddBookScreen.scss";
-import FileUploader from "react-firebase-file-uploader";
 import { db, storage } from "../../Database/firebaseConfig";
 import { useNavigate } from "react-router-dom";
 function AddBookScreen() {
@@ -13,21 +12,6 @@ function AddBookScreen() {
 	});
 	const [isdownloaded, setisdownloaded] = useState(false);
 	const [uploadMessage, setUploadMessage] = useState("");
-	const handleUploadSuccess = async (filename) => {
-		console.log("filename", filename);
-		const check = await storage.ref("images").child(filename).getDownloadURL();
-		console.log("imglink", check);
-		// .then((url) => {
-		// 	setformSubmit({ ...formSubmit, imglink: url });
-		// 	console.log("success");
-		// 	setisdownloaded(true);
-		// });
-	};
-
-	const handleUploadError = (error) => {
-		console.error(error);
-	};
-
 	const adduserfunc = async (e) => {
 		e.preventDefault();
 		console.log(formSubmit);
@@ -44,7 +28,7 @@ function AddBookScreen() {
 		console.log(e.target.files[0]);
 		const file = e.target.files[0];
 		const filname = new Date().toString();
-		const upload = await storage.ref().child(filname).put(file);
+		await storage.ref().child(filname).put(file);
 		const linkin = await storage.ref().child(filname).getDownloadURL();
 		setformSubmit({ ...formSubmit, imglink: linkin });
 		setUploadMessage("Uploading Successfully");
@@ -106,18 +90,6 @@ function AddBookScreen() {
 					id='file'
 					onChange={handleUpload}
 				/>
-				{/* <FileUploader
-					className='component'
-					name='avtar'
-					randomizeFilename
-					storageRef={storage.ref("images")}
-					accept='image/*'
-					required
-					onUploadStart={null}
-					onUploadError={handleUploadError}
-					onUploadSuccess={handleUploadSuccess}
-					onProgress={null}
-				/> */}
 				{uploadMessage && <h3>{uploadMessage}</h3>}
 				{isdownloaded && <button type='submit'>Register</button>}
 			</form>

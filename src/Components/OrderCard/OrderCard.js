@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import "./OrderCard.scss";
 function OrderCard({ name, email, booksArr }) {
@@ -9,6 +9,7 @@ function OrderCard({ name, email, booksArr }) {
 		if (data) {
 			bookstring = bookstring + data.name + ",";
 		}
+		return null;
 	});
 
 	return (
