@@ -10,7 +10,7 @@ function OverViewCard({ name, price, description, imglink, onClickFun }) {
 					<img src={imglink} alt='book' className='bookimg' />
 					<h1>{name}</h1>
 				</div>
-				<span>Price: {price}€</span>
+				<span>Preis: {price}€</span>
 			</div>
 			<p>
 				{description.length > 250

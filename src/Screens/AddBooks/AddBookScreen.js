@@ -19,19 +19,19 @@ function AddBookScreen() {
 			.collection("books")
 			.add(formSubmit)
 			.then(() => {
-				alert("Uploaded Successfully.");
+				alert("Buch erfolgreich hochgeladen.");
 				navigate(`/`);
 			});
 	};
 	const handleUpload = async (e) => {
-		setUploadMessage("Uploading Image");
+		setUploadMessage("Bild hochladen");
 		console.log(e.target.files[0]);
 		const file = e.target.files[0];
 		const filname = new Date().toString();
 		await storage.ref().child(filname).put(file);
 		const linkin = await storage.ref().child(filname).getDownloadURL();
 		setformSubmit({ ...formSubmit, imglink: linkin });
-		setUploadMessage("Uploading Successfully");
+		setUploadMessage("Hochladen erfolgreich");
 		setisdownloaded(true);
 	};
 	const handleChange = (e) => {
@@ -48,7 +48,7 @@ function AddBookScreen() {
 	return (
 		<div className='adduserdiv'>
 			<form className='adduserform' onSubmit={adduserfunc}>
-				<h1 className='formHeading'>Add Book</h1>
+				<h1 className='formHeading'>Neuen Kurs hinzufügen</h1>
 				<input
 					autoCapitalize='off'
 					autoComplete='off'
@@ -65,7 +65,7 @@ function AddBookScreen() {
 					autoComplete='off'
 					autoCorrect='off'
 					type={"text"}
-					placeholder='description'
+					placeholder='Bezeichnung'
 					minLength={9}
 					id='description'
 					value={formSubmit.description}
@@ -77,7 +77,7 @@ function AddBookScreen() {
 					autoCorrect='off'
 					type={"number"}
 					minLength={1}
-					placeholder='Price in €'
+					placeholder='Preis in €'
 					id='price'
 					value={formSubmit.price}
 					onChange={handleChange}
@@ -91,7 +91,7 @@ function AddBookScreen() {
 					onChange={handleUpload}
 				/>
 				{uploadMessage && <h3>{uploadMessage}</h3>}
-				{isdownloaded && <button type='submit'>Register</button>}
+				{isdownloaded && <button type='submit'>Kurs hinzufügen</button>}
 			</form>
 		</div>
 	);

@@ -15,7 +15,7 @@ function Home() {
 				dispatch(setAuth({ auth: "avalble" }));
 				localStorage.setItem("chessAppAdminPanel", "avalble");
 			} else {
-				alert("Wrong Credientals.");
+				alert("Falsche Anmeldeinformationen.");
 			}
 		}
 	};
@@ -32,7 +32,7 @@ function Home() {
 	return (
 		<section className='mainSection'>
 			<div className='formContainer'>
-				<h1 className='formHeading'>Admin Panel</h1>
+				<h1 className='formHeading'>Schach online lernen</h1>
 				<form className='loginForm' onSubmit={submitFun}>
 					<input
 						type='email'
@@ -44,13 +44,13 @@ function Home() {
 					/>
 					<input
 						type='password'
-						placeholder='password'
+						placeholder='passwort'
 						id='password'
 						minLength={5}
 						onChange={changeText}
 						required={true}
 					/>
-					<button type='submit'>Login</button>
+					<button type='submit'>Anmeldung</button>
 				</form>
 			</div>
 		</section>

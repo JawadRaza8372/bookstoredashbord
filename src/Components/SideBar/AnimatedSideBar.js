@@ -15,10 +15,18 @@ function AnimatedSideBar({ children }) {
 	const [expand, setexpand] = useState(false);
 	const dispatch = useDispatch();
 	const navArry = [
-		{ title: "Dashboard", icon: <HomeIcon id='navIcon' />, link: "/dashord" },
-		{ title: "Order", icon: <OrderIcon id='navIcon' />, link: "/orders" },
-		{ title: "Chat", icon: <ChatIcon id='navIcon' />, link: "/chatlist" },
-		{ title: "Add Book", icon: <AddBox id='navIcon' />, link: "/addUser" },
+		{
+			title: "Armaturenbrett",
+			icon: <HomeIcon id='navIcon' />,
+			link: "/dashord",
+		},
+		{ title: "Aufträge", icon: <OrderIcon id='navIcon' />, link: "/orders" },
+		{ title: "Plaudern", icon: <ChatIcon id='navIcon' />, link: "/chatlist" },
+		{
+			title: "hinzufügen",
+			icon: <AddBox id='navIcon' />,
+			link: "/addUser",
+		},
 	];
 	return (
 		<section className='mainContainer'>
@@ -52,7 +60,7 @@ function AnimatedSideBar({ children }) {
 						className='profile'>
 						<LogoutIcon id='logoutbutton' />
 
-						<span className='username'>Logout</span>
+						<span className='username'>Ausloggen</span>
 					</div>
 				</div>
 			</div>
