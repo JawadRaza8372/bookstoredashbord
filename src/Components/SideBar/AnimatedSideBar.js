@@ -26,7 +26,7 @@ function AnimatedSideBar({ children }) {
 				<div className='logoContent'>
 					<div className='logo'>
 						<AcUnitIcon id='logoicon' />
-						<div className='logoName'>Jawad Raza</div>
+						<div className='logoName'>Admin Panel</div>
 					</div>
 					{expand ? (
 						<CloseIcon id='menuIcon' onClick={() => setexpand(false)} />

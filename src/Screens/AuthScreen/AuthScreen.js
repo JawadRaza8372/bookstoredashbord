@@ -8,10 +8,15 @@ function Home() {
 	const submitFun = (e) => {
 		e.preventDefault();
 		console.log("submit", loginForm);
-		if (loginForm.email) {
-			if (loginForm.password) {
+		if (loginForm.email && loginForm.password) {
+			if (
+				loginForm.email === "admin@admin.com" &&
+				loginForm.password === "admin123"
+			) {
 				dispatch(setAuth({ auth: "avalble" }));
 				localStorage.setItem("chessAppAdminPanel", "avalble");
+			} else {
+				alert("Wrong Credientals.");
 			}
 		}
 	};
@@ -35,6 +40,8 @@ function Home() {
 						placeholder='email'
 						id='email'
 						onChange={changeText}
+						minLength={5}
+						required={true}
 					/>
 					<input
 						type='password'
@@ -42,6 +49,7 @@ function Home() {
 						id='password'
 						minLength={5}
 						onChange={changeText}
+						required={true}
 					/>
 					<button type='submit'>Login</button>
 				</form>
