@@ -7,7 +7,6 @@ function Home() {
 	const dispatch = useDispatch();
 	const submitFun = (e) => {
 		e.preventDefault();
-		console.log("submit", loginForm);
 		if (loginForm.email && loginForm.password) {
 			if (
 				loginForm.email === "admin@admin.com" &&
