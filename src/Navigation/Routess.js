@@ -8,6 +8,7 @@ import ChatListScreen from "../Screens/ChatListScreen/ChatListScreen";
 import ChatScreen from "../Screens/ChatScreen/ChatScreen";
 import { useSelector } from "react-redux";
 import AddBookScreen from "../Screens/AddBooks/AddBookScreen";
+import ErrorPage from "../Screens/ErrorPage/ErrorPage";
 function Routess() {
 	return (
 		<Routes>
@@ -67,7 +68,7 @@ function Routess() {
 					</ProtectedRoute>
 				}
 			/>
-			<Route path='*' element={<h1 style={{ color: "green" }}>error</h1>} />
+			<Route path='*' element={<ErrorPage />} />
 		</Routes>
 	);
 }

@@ -4,9 +4,14 @@ import Routess from "./Routess";
 import AnimatedSideBar from "../Components/SideBar/AnimatedSideBar";
 function Navigation() {
 	const location = useLocation()?.pathname;
+	console.log(location);
 	return (
 		<>
-			{location !== "/" ? (
+			{location === "/addUser" ||
+			location === "/orders" ||
+			location === "/chatlist" ||
+			location === "/dashord" ||
+			location.includes("/chat/") ? (
 				<AnimatedSideBar>
 					<Routess />
 				</AnimatedSideBar>
