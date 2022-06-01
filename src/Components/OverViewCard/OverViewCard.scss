@@ -16,20 +16,41 @@
 		font-size: 12px;
 		color: lightgrey;
 	}
-	button {
-		width: 50%;
-		height: 40px;
-		background-color: transparent;
-		font-size: 18px;
-		border: 1px solid red;
-		color: red;
-		transition: all 0.5s;
-		&:hover {
-			background-color: red;
-			color: $primary_color;
-			font-weight: bold;
+	.rowdivsec {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+		flex-direction: row;
+		button {
+			width: 42%;
+			height: 40px;
+			background-color: transparent;
+			font-size: 16px;
+
+			&:first-child {
+				border: 1px solid $secondry_color;
+				color: $secondry_color;
+				transition: all 0.5s;
+				&:hover {
+					background-color: $secondry_color;
+					color: $primary_color;
+					font-weight: bold;
+				}
+			}
+			&:last-child {
+				border: 1px solid red;
+				color: red;
+				transition: all 0.5s;
+				&:hover {
+					background-color: red;
+					color: $primary_color;
+					font-weight: bold;
+				}
+			}
 		}
 	}
+
 	.columndiv {
 		width: 90%;
 		display: flex;
@@ -44,18 +65,23 @@
 			flex-direction: row;
 			margin-bottom: 10px;
 			.bookimg {
-				width: 45px;
-				height: 45px;
-				border-radius: 45px;
-				margin-right: 10px;
+				width: 50px;
+				height: 50px;
+				border-radius: 100px;
 				border: 1px solid lightgrey;
 				overflow: hidden;
+				.showimg {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+			h1 {
+				color: $secondry_color;
+				margin-left: 10px;
 			}
 		}
-		h1 {
-			color: $secondry_color;
-			margin-bottom: 10px;
-		}
+
 		span {
 			color: lightgrey;
 			font-size: 14px;
@@ -77,4 +103,120 @@
 }
 .CircularProgressbar-text {
 	fill: lightgrey !important;
+}
+.mainmodel {
+	width: 100%;
+	height: 100%;
+	background-color: rgba($color: $primary_color, $alpha: 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+
+	.formContainer {
+		width: 90%;
+		max-width: 700px;
+		height: 90%;
+		max-height: 800px;
+		background-color: white;
+		overflow: hidden;
+		.adduserform {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			flex-direction: column;
+			overflow-x: hidden;
+			overflow-y: auto;
+			.rowdivsec {
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: space-evenly;
+				flex-direction: row;
+				button {
+					width: 42%;
+					height: 40px;
+					background-color: transparent;
+					font-size: 16px;
+
+					&:first-child {
+						border: 1px solid $primary_color;
+						color: $primary_color;
+						transition: all 0.5s;
+						&:hover {
+							background-color: $primary_color;
+							color: $secondry_color;
+							font-weight: bold;
+						}
+					}
+					&:last-child {
+						border: 1px solid red;
+						color: red;
+						transition: all 0.5s;
+						&:hover {
+							background-color: red;
+							color: $primary_color;
+							font-weight: bold;
+						}
+					}
+				}
+			}
+			.formHeading {
+				color: $primary_color;
+				@include fontSizeP(3vw);
+				text-align: center;
+			}
+			.courseimg {
+				height: 200px;
+				width: 100%;
+				object-fit: contain;
+			}
+			input {
+				width: 90%;
+				@include heightP(4vh);
+				outline-width: 0;
+				border: 0;
+				border-radius: 1vh;
+				background-color: $primary_color;
+				padding-left: 1vh;
+				padding-right: 1vh;
+				@include fontSizeP(0.2vw);
+				color: $secondry_color;
+				margin-bottom: 2vh;
+			}
+			#file {
+				padding-top: 2vh;
+			}
+			textarea {
+				width: 90%;
+				@include heightP(10vh);
+				outline-width: 0;
+				border: 0;
+				border-radius: 1vh;
+				background-color: $primary_color;
+				padding-left: 1vh;
+				padding-right: 1vh;
+				@include fontSizeP(0.2vw);
+				color: $secondry_color;
+				margin-bottom: 2vh;
+			}
+			button {
+				width: 90%;
+				max-width: 350px;
+				@include heightP(4vh);
+				background-color: $secondry_color;
+				border-radius: 1vh;
+				@include fontSizeP(0.2vw);
+				color: $primary_color;
+				font-weight: bold;
+				cursor: pointer;
+				margin-bottom: 2vh;
+			}
+		}
+	}
 }

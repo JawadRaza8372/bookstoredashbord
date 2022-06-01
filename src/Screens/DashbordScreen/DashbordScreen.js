@@ -22,6 +22,7 @@ function DashbordScreen() {
 					books.map((dat) => (
 						<OverViewCard
 							key={dat.id}
+							bookid={dat.id}
 							name={dat.name}
 							price={dat.price}
 							description={dat.description}

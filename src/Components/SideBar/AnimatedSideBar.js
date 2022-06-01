@@ -16,12 +16,12 @@ function AnimatedSideBar({ children }) {
 	const dispatch = useDispatch();
 	const navArry = [
 		{
-			title: "Armaturenbrett",
+			title: "Start",
 			icon: <HomeIcon id='navIcon' />,
 			link: "/dashord",
 		},
-		{ title: "Aufträge", icon: <OrderIcon id='navIcon' />, link: "/orders" },
-		{ title: "Plaudern", icon: <ChatIcon id='navIcon' />, link: "/chatlist" },
+		{ title: "Käufe", icon: <OrderIcon id='navIcon' />, link: "/orders" },
+		{ title: "Chat", icon: <ChatIcon id='navIcon' />, link: "/chatlist" },
 		{
 			title: "hinzufügen",
 			icon: <AddBox id='navIcon' />,
