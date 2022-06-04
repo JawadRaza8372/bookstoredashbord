@@ -9,6 +9,7 @@ function AddBookScreen() {
 		description: "",
 		price: "",
 		imglink: "",
+		playList: "",
 	});
 	const [isdownloaded, setisdownloaded] = useState(false);
 	const [uploadMessage, setUploadMessage] = useState("");
@@ -80,6 +81,17 @@ function AddBookScreen() {
 					placeholder='Preis in €'
 					id='price'
 					value={formSubmit.price}
+					onChange={handleChange}
+				/>
+				<input
+					autoCapitalize='off'
+					autoComplete='off'
+					autoCorrect='off'
+					type={"url"}
+					minLength={8}
+					placeholder='natürlich vimeo playlist link'
+					id='playList'
+					value={formSubmit.playList}
 					onChange={handleChange}
 				/>
 				<input

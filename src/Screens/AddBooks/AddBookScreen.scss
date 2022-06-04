@@ -14,7 +14,7 @@
 		flex-direction: column;
 		.formHeading {
 			color: $primary_color;
-			@include fontSizeP(4vw);
+			@include fontSizeP(3vw);
 			text-align: center;
 		}
 		input {

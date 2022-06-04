@@ -27,6 +27,7 @@ function DashbordScreen() {
 							price={dat.price}
 							description={dat.description}
 							imglink={dat.imglink}
+							playList={dat.playList}
 							onClickFun={() => delfunct(dat.id)}
 						/>
 					))}

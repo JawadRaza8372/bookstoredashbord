@@ -20,6 +20,7 @@ function App() {
 						description: doc.data().description,
 						imglink: doc.data().imglink,
 						price: doc.data().price,
+						playList: doc.data().playList,
 					})),
 				})
 			);
