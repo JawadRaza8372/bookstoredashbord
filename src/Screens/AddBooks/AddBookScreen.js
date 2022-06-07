@@ -66,7 +66,7 @@ function AddBookScreen() {
 					autoComplete='off'
 					autoCorrect='off'
 					type={"text"}
-					placeholder='Bezeichnung'
+					placeholder='Beschreibung'
 					minLength={9}
 					id='description'
 					value={formSubmit.description}
@@ -89,7 +89,7 @@ function AddBookScreen() {
 					autoCorrect='off'
 					type={"url"}
 					minLength={8}
-					placeholder='natürlich vimeo playlist link'
+					placeholder='Vimeo Showcases Link'
 					id='playList'
 					value={formSubmit.playList}
 					onChange={handleChange}

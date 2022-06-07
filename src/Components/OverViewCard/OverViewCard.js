@@ -83,7 +83,7 @@ function OverViewCard({
 				</p>
 				<div className='rowdivsec'>
 					<button onClick={Onclickupdate}>Update</button>
-					<button onClick={onClickFun}>Delete</button>
+					<button onClick={onClickFun}>Entfernen</button>
 				</div>
 			</div>
 			{showupdate && (
